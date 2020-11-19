@@ -10,7 +10,7 @@ $starttime = explode(' ', microtime());
 $starttime = $starttime[1] + $starttime[0];
 
 require '../app/libraries/framework.php';
-$f = new Framework('../app/settings.ini');
+$f = new Framework();
 require $f->get_controller_file_path();
 
 $totaltime = explode(' ', microtime());
