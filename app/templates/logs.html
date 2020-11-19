@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <h1 class="py-3 text-center"><?= count($logs) ?> Latest Requests</h1>
+    </div>
+    <? foreach($logs as $log): ?>
+        <div class="row">
+            <div class="col border mb-3 p-3 shadow">
+                date: <?= $log['date_time'] ?><br />
+                ip: <?= $log['ip'] ?><br />
+                url: <?= $log['url'] ?><br />
+                agent: <?= $log['user_agent'] ?><br />
+                tracker: <?= $log['tracker'] ?>
+            </div>
+        </div>
+    <? endforeach; ?>
+</div>
